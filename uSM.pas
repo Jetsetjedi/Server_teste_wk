@@ -265,16 +265,12 @@ var
   cJSONarray: TJSONArray;
   Smt: TMwk_pessoa;
 begin
-  if all > '0' then
-  begin
     FDTPessoa.Close;
     FDTPessoa.Open;
     FDTPessoa.First;
     Json := Smt.FDTtableToJsonArray(FDTPessoa);
     Result := Json;
-  end;
-  // JSON := JSON.loadFromURL('https://viacep.com.br/ws/'+cep+'/json/');
-  Result := Json;
+
 end;
 
 // listar
