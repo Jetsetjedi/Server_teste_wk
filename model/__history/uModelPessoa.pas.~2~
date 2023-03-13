@@ -1,0 +1,41 @@
+unit uModelPessoa;
+
+interface
+
+type
+  TMwk_pessoa = class
+   strict protected
+    class var FMwk_pessoa:TMwk_pessoa;
+    private
+     constructor CreatePrivate;
+     public
+     constructor  Create;
+     class function GetInstance: TMwk_pessoa;
+
+  end;
+
+implementation
+
+{ TMwk_pessoa }
+
+constructor TMwk_pessoa.Create;
+begin
+
+end;
+
+constructor TMwk_pessoa.CreatePrivate;
+begin
+  inherited Create;
+end;
+
+class function TMwk_pessoa.GetInstance: TMwk_pessoa;
+begin
+  if not Assigned(FMwk_pessoa) then
+   FMwk_pessoa := TMwk_pessoa.CreatePrivate;
+   Result:=fmwk_pessoa;
+
+
+
+end;
+
+end.
